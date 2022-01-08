@@ -68,7 +68,7 @@ for (var t = 1; t <= 2; t++) {
         }
 
         let type = ""
-        if(v==2){
+        if(t==2){
             type = "-Sarabun"
         }
         //delete old test.zip
