@@ -14,10 +14,9 @@ var zip = new AdmZip();
 //loop 1 to 2
 for (var t = 1; t <= 2; t++) {
     if(t == 1){
-        //remove ttf file
-        fs.unlinkSync("../Pack/assets/minecraft/font/THSarabunNew.ttf");
-    }else{
-        fs.unlinkSync("../Pack/assets/minecraft/font/ibmplexsansthai_fixed.ttf");
+        //fs.unlinkSync("../Pack/assets/minecraft/font/THSarabunNew.ttf");
+    }else if(t == 2){
+        //fs.unlinkSync("../Pack/assets/minecraft/font/ibmplexsansthai_fixed.ttf");
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
         var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:THSarabunNew.ttf");
