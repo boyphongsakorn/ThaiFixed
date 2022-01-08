@@ -17,9 +17,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          cache: 'npm'
+      #- uses: actions/setup-node@v2
+      #  with:
+      #    node-version: '14'
+      #    cache: 'npm'
+      #  working-directory: NodeJSBuild
+      
+      - run: npm install
+        working-directory: NodeJSBuild
           
       - run: cd /NodeJSBuild && npm install
