@@ -12,7 +12,7 @@ var zip = new AdmZip();
 //zip.addLocalFile("/home/me/some_picture.png");
 
 //loop 1 to 2
-for (var t = 1; t <= 2; t++) {
+for (var t = 1; t <= 3; t++) {
     if(t == 1){
         //fs.unlinkSync("../Pack/assets/minecraft/font/THSarabunNew.ttf");
     }else if(t == 2){
@@ -25,6 +25,11 @@ for (var t = 1; t <= 2; t++) {
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
         var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:thsarabunnew.ttf");
+        fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
+    }else if(t == 3){
+        //edit json file
+        var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
+        var json_edit = json.replace("minecraft:thsarabunnew.ttf", "minecraft:mitr.ttf");
         fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
     }
 
@@ -74,6 +79,8 @@ for (var t = 1; t <= 2; t++) {
         let type = ""
         if(t==2){
             type = "-Sarabun"
+        }if(t==3){
+            type = "-Mitr"
         }
         //delete old test.zip
         fs.unlink("ThaiFixed"+type+"." + version + ".zip", function (err) {
