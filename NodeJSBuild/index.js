@@ -16,8 +16,10 @@ for (var t = 1; t <= 2; t++) {
     if(t == 1){
         //fs.unlinkSync("../Pack/assets/minecraft/font/THSarabunNew.ttf");
     }else if(t == 2){
-        //remove kerning pair from font
-        
+        //change file name to lower case
+        var file = "../Pack/assets/minecraft/font/THSarabunNew.ttf";
+        var newFile = "../Pack/assets/minecraft/font/thsarabunnew.ttf";
+        fs.renameSync(file, newFile);
 
         //fs.unlinkSync("../Pack/assets/minecraft/font/ibmplexsansthai_fixed.ttf");
         //edit json file
