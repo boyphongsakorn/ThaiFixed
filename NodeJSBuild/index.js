@@ -16,10 +16,13 @@ for (var t = 1; t <= 2; t++) {
     if(t == 1){
         //fs.unlinkSync("../Pack/assets/minecraft/font/THSarabunNew.ttf");
     }else if(t == 2){
+        //remove kerning pair from font
+        
+
         //fs.unlinkSync("../Pack/assets/minecraft/font/ibmplexsansthai_fixed.ttf");
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
-        var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:THSarabunNew.ttf");
+        var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:thsarabunnew.ttf");
         fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
     }
 
