@@ -21,10 +21,13 @@ for (var t = 1; t <= 3; t++) {
         var newFile = "../Pack/assets/minecraft/font/thsarabunnew.ttf";
         fs.renameSync(file, newFile);
 
+        fs.unlinkSync("../Pack/assets/minecraft/font/thsarabunnew.ttf");
+        fs.unlinkSync("../Pack/assets/minecraft/font/mitr.ttf");
+
         //fs.unlinkSync("../Pack/assets/minecraft/font/ibmplexsansthai_fixed.ttf");
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
-        var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:thsarabunnew.ttf");
+        var json_edit = json.replace("minecraft:ibmplexsansthai_fixed.ttf", "minecraft:thsarabunnew_fixed.ttf");
         fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
     }else if(t == 3){
         //edit json file
@@ -32,8 +35,8 @@ for (var t = 1; t <= 3; t++) {
         var json_edit = json.replace("minecraft:thsarabunnew.ttf", "minecraft:mitr_fixed.ttf");
         var json_edit2 = json_edit.replace("[0.0, 0.6]", "[0.0, 0.0]");
         var json_edit3 = json_edit2.replace("10.0", "7.7");
-        var json_edit4 = json_edit2.replace("12.5", "14.5");
-        fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit3, "utf8");
+        var json_edit4 = json_edit3.replace("12.5", "14.5");
+        fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit4, "utf8");
     }
 
     //loop 1 to 8
