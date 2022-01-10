@@ -29,7 +29,7 @@ for (var t = 1; t <= 3; t++) {
     }else if(t == 3){
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
-        var json_edit = json.replace("minecraft:thsarabunnew.ttf", "minecraft:mitr.ttf");
+        var json_edit = json.replace("minecraft:thsarabunnew.ttf", "minecraft:mitr_fixed.ttf");
         fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
     }
 
