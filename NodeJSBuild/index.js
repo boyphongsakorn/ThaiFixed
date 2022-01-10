@@ -30,7 +30,9 @@ for (var t = 1; t <= 3; t++) {
         //edit json file
         var json = fs.readFileSync("../Pack/assets/minecraft/font/default.json", "utf8");
         var json_edit = json.replace("minecraft:thsarabunnew.ttf", "minecraft:mitr_fixed.ttf");
-        fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit, "utf8");
+        var json_edit2 = json_edit.replace("[0.0, 0.6]", "[0.0, 0.0]");
+        var json_edit3 = json_edit2.replace("10.0", "7.7");
+        fs.writeFileSync("../Pack/assets/minecraft/font/default.json", json_edit3, "utf8");
     }
 
     //loop 1 to 8
